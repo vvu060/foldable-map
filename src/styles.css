@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    background: hsl(73, 39%, 76%);
+  }
+}
+
+@layer components {
+  .map-image {
+    background-image: url('./map.webp');
+    background-size: 300%;
+  }
+
+  .map-image:nth-child(2) {
+    background-position: 50%;
+  }
+
+  .map-image:nth-child(3) {
+    background-position: 100%;
+  }
+}
