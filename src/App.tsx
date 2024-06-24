@@ -24,7 +24,10 @@ const FoldableMap = () => {
   return (
     <div className='mx-auto grid aspect-video max-h-[80vh] p-8'>
       <div className='aspect-video grid grid-cols-3 h-full w-full [grid-area:1/1]'>
-        <motion.div style={{ x: xLeftSection }} className='map-image' />
+        <motion.div
+          style={{ x: xLeftSection, skewY: '-1deg' }}
+          className='map-image origin-bottom-right border-r border[rgba(255, 255, 255, 0.1)]'
+        />
         <motion.div
           style={
             {
@@ -34,7 +37,10 @@ const FoldableMap = () => {
           }
           className='map-image brightness-[--brightness]'
         />
-        <motion.div style={{ x: xRightSection }} className='map-image' />
+        <motion.div
+          style={{ x: xRightSection, skewY: '1deg' }}
+          className='map-image origin-bottom-left border-l border[rgba(255, 255, 255, 0.1)]'
+        />
       </div>
       <motion.div
         drag='x'
