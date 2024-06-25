@@ -26,7 +26,7 @@ const FoldableMap = () => {
       <div className='aspect-video grid grid-cols-3 h-full w-full [grid-area:1/1]'>
         <motion.div
           style={{ x: xLeftSection, skewY: '-1deg' }}
-          className='map-image origin-bottom-right border-r border[rgba(255, 255, 255, 0.1)]'
+          className='map-image origin-bottom-right border-r border-[rgba(255, 255, 255, .1)] shadow-2xl'
         />
         <motion.div
           style={
@@ -39,7 +39,7 @@ const FoldableMap = () => {
         />
         <motion.div
           style={{ x: xRightSection, skewY: '1deg' }}
-          className='map-image origin-bottom-left border-l border[rgba(255, 255, 255, 0.1)]'
+          className='map-image origin-bottom-left border-l border-[rgba(255, 255, 255, .1)] shadow-2xl'
         />
       </div>
       <motion.div
