@@ -33,7 +33,7 @@ const FoldableMap = () => {
   });
 
   return (
-    <div className='overflow-clip'>
+    <div className='overflow-x-clip'>
       <motion.div
         animate={isFolded ? 'folded' : 'open'}
         variants={{
@@ -72,9 +72,28 @@ const FoldableMap = () => {
               },
               timeConstant: 45,
             }}
-            className='[grid-area:1/1] relative z-10'
+            className='[grid-area:1/1] relative z-10 cursor-grab active:cursor-grabbing'
           />
         </div>
+        <motion.div
+          variants={{
+            folded: {
+              opacity: 0,
+              scale: 0.9,
+              y: 30,
+            },
+            open: {
+              opacity: 1,
+              scale: 1,
+              y: 0,
+            },
+          }}
+          className='flex w-full justify-center text-xl font-semibold md:text-4xl'
+        >
+          <p className='rounded-2xl bg-white px-12 py-5 text-[hsl(73_69%_26%)]'>
+            Pick your favorite spot
+          </p>
+        </motion.div>
       </motion.div>
     </div>
   );
